@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Icons Fontawesome -->
+    <script src="https://kit.fontawesome.com/977321685b.js" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+    <header class="contact">
+        <div class="container">
+            <nav class="menu">
+                <img src="images/logo.png" alt="Logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">About me</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1><span>Contact </span>Page</h1>
+            </div>
+        </div>
+    </header>
+    <section class="contact_block">
+        <div class="container">
+            <div class="row">
+                <div class="contact_left">
+                    <h2 class="sub-title">Contact Me</h2>
+                    <h3>Omirzak Yerassyl</h3>
+
+                    <p><i class="fa-solid fa-envelope"></i>220103360@stu.sdu.edu.kz</p>
+                    <p><i class="fa-solid fa-phone"></i>87072016113</p>
+                    <div class="social_icons">
+                        <a href="http://instagram.com/yerassill" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="http://t.me/yerassill" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"> </span>
+                </div>
+                <div class="contact_right">
+                    <div class="medium_map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2908.034149153334!2d76.66709307636629!3d43.20877307112657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388345a35db0962d%3A0xd9437541092dd062!2sSDU!5e0!3m2!1sen!2skz!4v1728834286327!5m2!1sen!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="small_map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2908.0907596393213!2d76.66700542636623!3d43.20758567112676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38834f7675d8a6c3%3A0x7b7d14aec270c056!2sSDU%20University!5e0!3m2!1sen!2skz!4v1728841595705!5m2!1sen!2skz" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Yerassyl. Made with <i class="fa-solid fa-heart"></i>.</p>
+        </div>
+    </section>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right = "0px";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw3ksbIumzL3wBKnSjFLd7Emi4X8FoitA3fQbvyRv647Pet9S8VvltIz1IvJhcME0f5IA/exec '
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent succesfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+</html>

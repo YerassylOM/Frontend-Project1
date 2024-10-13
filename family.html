@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Icons Fontawesome -->
+    <script src="https://kit.fontawesome.com/977321685b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="fam">
+        <div class="container">
+            <nav class="menu">
+                <img src="images/logo.png" alt="Logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">About me</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1><span>Family</span> Page</h1>
+            </div>
+        </div>
+    </header>
+    <section class="family">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <h3 class="sub-title">Members</h3>
+                    <ul class="fam-list">
+                        <li class="fam-members active-member" onclick="opentab('roza')">Roza</li>
+                        <li class="fam-members" onclick="opentab('akbota')">Akbota</li>
+                        <li class="fam-members" onclick="opentab('aida')">Aida</li>
+                        <li class="fam-members" onclick="opentab('asylzat')">Asylzat</li>
+                        <li class="fam-members" onclick="opentab('accent')">Accent</li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <div class="member_contents active-content" id="roza">
+                        <img src="images/mother.JPG" alt="mother">
+                        <div class="info">
+                            <h3 class="">Roza Mirzamuratova</h3>
+                            <p>She was born in . Its near to Saragash. Now she lives in Shymkent. She is 46 years old. Lately she got PhD degree. She was in 5-8 countries.She's ru is Sirgeli.</p>
+                            <a href="https://www.instagram.com/rmirzamuratova"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member_contents" id="akbota">
+                        <img src="images/akbota.jpg" alt="mother">
+                        <div class="info">
+                            <h3 class="">Akbota Sharapova</h3>
+                            <p>She was born in Shymkent. Its third big city in Kazakhstan. Now she lives in Almaty. She married. She has slim husband and one honey son. She is 23 years old. </p>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member_contents" id="aida">
+                        <img src="images/aidon.jpg" alt="mother">
+                        <div class="info">
+                            <h3 class="">Aida Sharapova</h3>
+                            <p>She was born in Shymkent. Its third big city in Kazakhstan. Now she lives in Almaty. Lately she finished her bachelor degree. Now she works on visa maker company. She is 21 years old.</p>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member_contents" id="asylzat">
+                        <img src="images/asi.jpg" alt="mother">
+                        <div class="info">
+                            <h3 class="">Asylzat Umirzah</h3>
+                            <p>She was born in Shymkent. Its third big city in Kazakhstan. Now she lives in Shymkent. She studys on 9 class in the school. She is 14 years old.</p>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member_contents" id="accent">
+                        <img src="images/accent.jpg" alt="mother">
+                        <div class="info">
+                            <h3>Hyundai Accent</h3>
+                            <p>He is from Korea. But lives in Shymkent. He is 6 years old. Engine is 1.6. Good car for city. Economy and reliable car.</p>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var fammembers = document.getElementsByClassName("fam-members")
+        var member_contents = document.getElementsByClassName("member_contents")
+        function opentab(name){
+            for(fammember of fammembers){
+                fammember.classList.remove("active-member")
+            }
+            for(member_content of member_contents){
+                member_content.classList.remove("active-content")
+            }
+            event.currentTarget.classList.add("active-member")
+            document.getElementById(name).classList.add("active-content")
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right = "0px";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

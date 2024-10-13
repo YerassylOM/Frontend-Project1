@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Icons Fontawesome -->
+    <script src="https://kit.fontawesome.com/977321685b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="education">
+        <div class="container">
+            <nav class="menu">
+                <img src="images/logo.png" alt="Logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">About me</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1><span>Education </span>Page</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="edu">
+        <div class="container">
+            <h2 class="sub-title">My Educations</h2>
+            <div class="educations-list">
+                <div>
+                    <img src="images/sduu.jpg" alt="">
+                    <h3>University</h3>
+                    <ul>
+                        <li>2022 - Current</li>
+                        <li>Name: SDU University</li>
+                        <li>Major: Information Systems</li>
+                        <li>City: Kaskelen</li>
+                        <li>Address: Abylaikhan 1/1</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="images/school3.JPG" alt="">
+                    <h3>School</h3>
+                    <ul>
+                        <li>2011 - 2022</li>
+                        <li>Name: N29 A.Moldagulova</li>
+                        <li>City: Shymkent</li>
+                        <li>School: Midle school</li>
+                        <li>Address: Gagarina,22</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="images/mus.jpg" alt="">
+                    <h3>Music School</h3>
+                    <ul>
+                        <li>2017 - 2021</li>
+                        <li>Name: N2 Music school</li>
+                        <li>Instrument: Dombyra</li>
+                        <li>City: Shymkent</li>
+                        <li>Address: Gagarina,13</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right = "0px";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    
+</body>
+</html>

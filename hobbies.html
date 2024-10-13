@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Icons Fontawesome -->
+    <script src="https://kit.fontawesome.com/977321685b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="hobbies">
+        <div class="container">
+            <nav class="menu">
+                <img src="images/logo.png" alt="Logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">About me</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1><span>Hobbies </span>Page</h1>
+            </div>
+        </div>
+    </header>
+    <section class="hobbie">
+        <div class="contrainer">
+            <h2 class="sub-title">My Hobbies</h2>
+            <div class="hobbies-list">
+                <div class="hobbie-content">
+                    <img src="images/hob_dombyra.jpg" alt="mother">
+                    <div class="info hobbie_name">
+                        <h3>Playing Dombyra</h3>
+                    </div>
+                </div>
+                <div class="hobbie-content">
+                    <img src="images/hob_car.jpg" alt="mother">
+                    <div class="info hobbie_name">
+                        <h3>Driving Car</h3>
+                    </div>
+                </div>
+                <div class="hobbie-content">
+                    <img src="images/hob_football.jpg" alt="mother">
+                    <div class="info hobbie_name">
+                        <h3 >Playing Football</h3>
+                    </div>
+                </div>
+                <div class="hobbie-content">
+                    <img src="images/hob_gitar.jpg" alt="mother">
+                    <div class="info hobbie_name">
+                        <h3>Playing Gitar</h3>
+                    </div>
+                </div>
+                <div class="hobbie-content">
+                    <img src="images/hob_hiking.jpg" alt="mother">
+                    <div class="info hobbie_name">
+                        <h3>Hiking</h3>
+                    </div>
+                </div>
+                <div class="hobbie-content">
+                    <img src="images/hob_readingbook.jpg" alt="mother">
+                    <div class="info hobbie_name">
+                        <h3>Reading Book</h3>
+                    </div>
+                </div>
+                <div class="hobbie-content">
+                    <img src="images/hob_horseriding.jpg" alt="mother">
+                    <div class="info hobbie_name">
+                        <h3>Horse Riding</h3>
+                    </div>
+                </div>
+                <div class="hobbie-content">
+                    <img src="images/hob_sport.jpg" alt="mother">
+                    <div class="info hobbie_name">
+                        <h3>Traning</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right = "0px";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
